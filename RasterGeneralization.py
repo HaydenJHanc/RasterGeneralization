@@ -23,7 +23,7 @@ TempFolder = r"" # Insert folder here
 PolygonFeatureFile = r"" # Insert file here
 
 # Add field to the shapefile used in generalization, put that field in this line
-with arcpy.da.UpdateCursor(PolygonFeatureFile, ["OID@", "SHAPE@", "FctImp"]) as cursor:
+with arcpy.da.UpdateCursor(PolygonFeatureFile, ["OID@", "SHAPE@", "INSERT FIELD NAME HERE"]) as cursor:
     # For all polygons in your shapefile
     for row in cursor:
         # Doesn't Process raster if the value is already populated
